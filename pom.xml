@@ -116,12 +116,7 @@
             </snapshots>
         </repository>
 
-    	<repository>
-    		<id>pentaho-releases</id>
-    		<url>http://nexus.pentaho.org/content/groups/omni/</url>
-    	</repository>
-
-        <repository>
+         <repository>
             <id>miredot</id>
             <url>http://nexus.qmino.com/content/repositories/miredot/</url>
         </repository>
