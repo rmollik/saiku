@@ -198,7 +198,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <serverId>nexus</serverId>
+                    <serverId>${distribution.repository.snapshot.id}</serverId>
                     <nexusUrl>http://repo.meteorite.bi</nexusUrl>
                     <skipStaging>true</skipStaging>
                 </configuration>
