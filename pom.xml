@@ -22,19 +22,7 @@
         <module>saiku-bi-platform-plugin-p7.1</module>
     </modules>
 
-    <distributionManagement>
-        <repository>
-            <id>utility</id>
-            <name>utility-releases</name>
-            <url>http://repo.meteorite.bi/repository/alabs-release-local/</url>
-        </repository>
-        <snapshotRepository>
-            <id>utility</id>
-            <name>utility-snapshots</name>
-            <url>http://repo.meteorite.bi/repository/alabs-snapshot-local/</url>
-        </snapshotRepository>
-    </distributionManagement>
-    <properties>
+   <properties>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
         <top.dir>${project.basedir}</top.dir>
@@ -50,7 +38,24 @@
         <pentaho.platform.version>5.0.0</pentaho.platform.version>
         <serenity.version>1.0.58</serenity.version>
         <jbehave.version>3.9.3</jbehave.version>
+	    <distribution.repository.release.id>utility</distribution.repository.release.id>
+	    <distribution.repository.release.url>http://repo.meteorite.bi/repository/alabs-release-local/</distribution.repository.release.url>
+	    <distribution.repository.snapshot.id>utility</distribution.repository.snapshot.id>
+	    <distribution.repository.snapshot.url>http://repo.meteorite.bi/repository/alabs-snapshot-local/</distribution.repository.snapshot.url>
     </properties>
+    
+    <distributionManagement>
+        <repository>
+            <id>${distribution.repository.release.id}</id>
+            <name>utility-releases</name>
+            <url>${distribution.repository.release.url}</url>
+        </repository>
+        <snapshotRepository>
+            <id>${distribution.repository.snapshot.id}</id>
+            <name>utility-snapshots</name>
+            <url>${distribution.repository.snapshot.url}</url>
+        </snapshotRepository>
+    </distributionManagement>
     <pluginRepositories>
         <pluginRepository>
             <id>Analytical Labs Plugin Repo</id>
@@ -323,7 +328,6 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
