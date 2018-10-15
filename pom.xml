@@ -5,7 +5,7 @@
     <groupId>org.saikuanalytics</groupId>
     <artifactId>saiku</artifactId>
     <packaging>pom</packaging>
-    <version>3.17</version>
+    <version>3.90</version>
     <name>Saiku Module Project</name>
     <scm>
         <developerConnection>
@@ -370,6 +370,12 @@
                 <groupId>org.jasig.cas.client</groupId>
                 <artifactId>cas-client-core</artifactId>
                 <version>3.3.2</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>log4j-over-slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.jasig.cas.client</groupId>
