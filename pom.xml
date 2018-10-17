@@ -38,10 +38,11 @@
         <pentaho.platform.version>5.0.0</pentaho.platform.version>
         <serenity.version>1.0.58</serenity.version>
         <jbehave.version>3.9.3</jbehave.version>
+        <distribution.repository.base.url>http://repo.meteorite.bi</distribution.repository.base.url>
 	    <distribution.repository.release.id>utility</distribution.repository.release.id>
-	    <distribution.repository.release.url>http://repo.meteorite.bi/repository/alabs-release-local/</distribution.repository.release.url>
+	    <distribution.repository.release.url>${distribution.repository.base.url}/repository/alabs-release-local/</distribution.repository.release.url>
 	    <distribution.repository.snapshot.id>utility</distribution.repository.snapshot.id>
-	    <distribution.repository.snapshot.url>http://repo.meteorite.bi/repository/alabs-snapshot-local/</distribution.repository.snapshot.url>
+	    <distribution.repository.snapshot.url>${distribution.repository.base.url}/repository/alabs-snapshot-local/</distribution.repository.snapshot.url>
     </properties>
     
     <distributionManagement>
@@ -199,7 +200,7 @@
                 </executions>
                 <configuration>
                     <serverId>${distribution.repository.snapshot.id}</serverId>
-                    <nexusUrl>http://repo.meteorite.bi</nexusUrl>
+                    <nexusUrl>${distribution.repository.base.url}</nexusUrl>
                     <skipStaging>true</skipStaging>
                 </configuration>
             </plugin>
